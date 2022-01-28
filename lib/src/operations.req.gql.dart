@@ -84,3 +84,118 @@ abstract class GFetchUserListReq
   static GFetchUserListReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(GFetchUserListReq.serializer, json);
 }
+
+abstract class GFindUsersByPkReq
+    implements
+        Built<GFindUsersByPkReq, GFindUsersByPkReqBuilder>,
+        _i1.OperationRequest<_i2.GFindUsersByPkData, _i3.GFindUsersByPkVars> {
+  GFindUsersByPkReq._();
+
+  factory GFindUsersByPkReq([Function(GFindUsersByPkReqBuilder b) updates]) =
+      _$GFindUsersByPkReq;
+
+  static void _initializeBuilder(GFindUsersByPkReqBuilder b) => b
+    ..operation =
+        _i4.Operation(document: _i5.document, operationName: 'FindUsersByPk')
+    ..executeOnListen = true;
+  _i3.GFindUsersByPkVars get vars;
+  _i4.Operation get operation;
+  _i4.Request get execRequest =>
+      _i4.Request(operation: operation, variables: vars.toJson());
+  String? get requestId;
+  @BuiltValueField(serialize: false)
+  _i2.GFindUsersByPkData? Function(
+      _i2.GFindUsersByPkData?, _i2.GFindUsersByPkData?)? get updateResult;
+  _i2.GFindUsersByPkData? get optimisticResponse;
+  String? get updateCacheHandlerKey;
+  Map<String, dynamic>? get updateCacheHandlerContext;
+  _i1.FetchPolicy? get fetchPolicy;
+  bool get executeOnListen;
+  @override
+  _i2.GFindUsersByPkData? parseData(Map<String, dynamic> json) =>
+      _i2.GFindUsersByPkData.fromJson(json);
+  static Serializer<GFindUsersByPkReq> get serializer =>
+      _$gFindUsersByPkReqSerializer;
+  Map<String, dynamic> toJson() =>
+      (_i6.serializers.serializeWith(GFindUsersByPkReq.serializer, this)
+          as Map<String, dynamic>);
+  static GFindUsersByPkReq? fromJson(Map<String, dynamic> json) =>
+      _i6.serializers.deserializeWith(GFindUsersByPkReq.serializer, json);
+}
+
+abstract class GFindUsersByNameReq
+    implements
+        Built<GFindUsersByNameReq, GFindUsersByNameReqBuilder>,
+        _i1.OperationRequest<_i2.GFindUsersByNameData,
+            _i3.GFindUsersByNameVars> {
+  GFindUsersByNameReq._();
+
+  factory GFindUsersByNameReq(
+      [Function(GFindUsersByNameReqBuilder b) updates]) = _$GFindUsersByNameReq;
+
+  static void _initializeBuilder(GFindUsersByNameReqBuilder b) => b
+    ..operation =
+        _i4.Operation(document: _i5.document, operationName: 'FindUsersByName')
+    ..executeOnListen = true;
+  _i3.GFindUsersByNameVars get vars;
+  _i4.Operation get operation;
+  _i4.Request get execRequest =>
+      _i4.Request(operation: operation, variables: vars.toJson());
+  String? get requestId;
+  @BuiltValueField(serialize: false)
+  _i2.GFindUsersByNameData? Function(
+      _i2.GFindUsersByNameData?, _i2.GFindUsersByNameData?)? get updateResult;
+  _i2.GFindUsersByNameData? get optimisticResponse;
+  String? get updateCacheHandlerKey;
+  Map<String, dynamic>? get updateCacheHandlerContext;
+  _i1.FetchPolicy? get fetchPolicy;
+  bool get executeOnListen;
+  @override
+  _i2.GFindUsersByNameData? parseData(Map<String, dynamic> json) =>
+      _i2.GFindUsersByNameData.fromJson(json);
+  static Serializer<GFindUsersByNameReq> get serializer =>
+      _$gFindUsersByNameReqSerializer;
+  Map<String, dynamic> toJson() =>
+      (_i6.serializers.serializeWith(GFindUsersByNameReq.serializer, this)
+          as Map<String, dynamic>);
+  static GFindUsersByNameReq? fromJson(Map<String, dynamic> json) =>
+      _i6.serializers.deserializeWith(GFindUsersByNameReq.serializer, json);
+}
+
+abstract class GUpdateUserReq
+    implements
+        Built<GUpdateUserReq, GUpdateUserReqBuilder>,
+        _i1.OperationRequest<_i2.GUpdateUserData, _i3.GUpdateUserVars> {
+  GUpdateUserReq._();
+
+  factory GUpdateUserReq([Function(GUpdateUserReqBuilder b) updates]) =
+      _$GUpdateUserReq;
+
+  static void _initializeBuilder(GUpdateUserReqBuilder b) => b
+    ..operation =
+        _i4.Operation(document: _i5.document, operationName: 'UpdateUser')
+    ..executeOnListen = true;
+  _i3.GUpdateUserVars get vars;
+  _i4.Operation get operation;
+  _i4.Request get execRequest =>
+      _i4.Request(operation: operation, variables: vars.toJson());
+  String? get requestId;
+  @BuiltValueField(serialize: false)
+  _i2.GUpdateUserData? Function(_i2.GUpdateUserData?, _i2.GUpdateUserData?)?
+      get updateResult;
+  _i2.GUpdateUserData? get optimisticResponse;
+  String? get updateCacheHandlerKey;
+  Map<String, dynamic>? get updateCacheHandlerContext;
+  _i1.FetchPolicy? get fetchPolicy;
+  bool get executeOnListen;
+  @override
+  _i2.GUpdateUserData? parseData(Map<String, dynamic> json) =>
+      _i2.GUpdateUserData.fromJson(json);
+  static Serializer<GUpdateUserReq> get serializer =>
+      _$gUpdateUserReqSerializer;
+  Map<String, dynamic> toJson() =>
+      (_i6.serializers.serializeWith(GUpdateUserReq.serializer, this)
+          as Map<String, dynamic>);
+  static GUpdateUserReq? fromJson(Map<String, dynamic> json) =>
+      _i6.serializers.deserializeWith(GUpdateUserReq.serializer, json);
+}

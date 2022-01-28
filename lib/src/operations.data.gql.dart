@@ -163,3 +163,337 @@ abstract class GFetchUserListData_users_works_category
       _i1.serializers.deserializeWith(
           GFetchUserListData_users_works_category.serializer, json);
 }
+
+abstract class GFindUsersByPkData
+    implements Built<GFindUsersByPkData, GFindUsersByPkDataBuilder> {
+  GFindUsersByPkData._();
+
+  factory GFindUsersByPkData([Function(GFindUsersByPkDataBuilder b) updates]) =
+      _$GFindUsersByPkData;
+
+  static void _initializeBuilder(GFindUsersByPkDataBuilder b) =>
+      b..G__typename = 'query_root';
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  GFindUsersByPkData_users_by_pk? get users_by_pk;
+  static Serializer<GFindUsersByPkData> get serializer =>
+      _$gFindUsersByPkDataSerializer;
+  Map<String, dynamic> toJson() =>
+      (_i1.serializers.serializeWith(GFindUsersByPkData.serializer, this)
+          as Map<String, dynamic>);
+  static GFindUsersByPkData? fromJson(Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(GFindUsersByPkData.serializer, json);
+}
+
+abstract class GFindUsersByPkData_users_by_pk
+    implements
+        Built<GFindUsersByPkData_users_by_pk,
+            GFindUsersByPkData_users_by_pkBuilder> {
+  GFindUsersByPkData_users_by_pk._();
+
+  factory GFindUsersByPkData_users_by_pk(
+          [Function(GFindUsersByPkData_users_by_pkBuilder b) updates]) =
+      _$GFindUsersByPkData_users_by_pk;
+
+  static void _initializeBuilder(GFindUsersByPkData_users_by_pkBuilder b) =>
+      b..G__typename = 'users';
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  int get id;
+  String get name;
+  String get email;
+  String get adresse;
+  String get role;
+  String get function;
+  BuiltList<GFindUsersByPkData_users_by_pk_works> get works;
+  static Serializer<GFindUsersByPkData_users_by_pk> get serializer =>
+      _$gFindUsersByPkDataUsersByPkSerializer;
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+      GFindUsersByPkData_users_by_pk.serializer, this) as Map<String, dynamic>);
+  static GFindUsersByPkData_users_by_pk? fromJson(Map<String, dynamic> json) =>
+      _i1.serializers
+          .deserializeWith(GFindUsersByPkData_users_by_pk.serializer, json);
+}
+
+abstract class GFindUsersByPkData_users_by_pk_works
+    implements
+        Built<GFindUsersByPkData_users_by_pk_works,
+            GFindUsersByPkData_users_by_pk_worksBuilder> {
+  GFindUsersByPkData_users_by_pk_works._();
+
+  factory GFindUsersByPkData_users_by_pk_works(
+          [Function(GFindUsersByPkData_users_by_pk_worksBuilder b) updates]) =
+      _$GFindUsersByPkData_users_by_pk_works;
+
+  static void _initializeBuilder(
+          GFindUsersByPkData_users_by_pk_worksBuilder b) =>
+      b..G__typename = 'works';
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  int get id;
+  String get name;
+  String get description;
+  String get image_url;
+  GFindUsersByPkData_users_by_pk_works_category get category;
+  static Serializer<GFindUsersByPkData_users_by_pk_works> get serializer =>
+      _$gFindUsersByPkDataUsersByPkWorksSerializer;
+  Map<String, dynamic> toJson() => (_i1.serializers
+          .serializeWith(GFindUsersByPkData_users_by_pk_works.serializer, this)
+      as Map<String, dynamic>);
+  static GFindUsersByPkData_users_by_pk_works? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+          GFindUsersByPkData_users_by_pk_works.serializer, json);
+}
+
+abstract class GFindUsersByPkData_users_by_pk_works_category
+    implements
+        Built<GFindUsersByPkData_users_by_pk_works_category,
+            GFindUsersByPkData_users_by_pk_works_categoryBuilder> {
+  GFindUsersByPkData_users_by_pk_works_category._();
+
+  factory GFindUsersByPkData_users_by_pk_works_category(
+      [Function(GFindUsersByPkData_users_by_pk_works_categoryBuilder b)
+          updates]) = _$GFindUsersByPkData_users_by_pk_works_category;
+
+  static void _initializeBuilder(
+          GFindUsersByPkData_users_by_pk_works_categoryBuilder b) =>
+      b..G__typename = 'categories';
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  int get id;
+  String get name;
+  String get description;
+  static Serializer<GFindUsersByPkData_users_by_pk_works_category>
+      get serializer => _$gFindUsersByPkDataUsersByPkWorksCategorySerializer;
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+          GFindUsersByPkData_users_by_pk_works_category.serializer, this)
+      as Map<String, dynamic>);
+  static GFindUsersByPkData_users_by_pk_works_category? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+          GFindUsersByPkData_users_by_pk_works_category.serializer, json);
+}
+
+abstract class GFindUsersByNameData
+    implements Built<GFindUsersByNameData, GFindUsersByNameDataBuilder> {
+  GFindUsersByNameData._();
+
+  factory GFindUsersByNameData(
+          [Function(GFindUsersByNameDataBuilder b) updates]) =
+      _$GFindUsersByNameData;
+
+  static void _initializeBuilder(GFindUsersByNameDataBuilder b) =>
+      b..G__typename = 'query_root';
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  BuiltList<GFindUsersByNameData_users> get users;
+  static Serializer<GFindUsersByNameData> get serializer =>
+      _$gFindUsersByNameDataSerializer;
+  Map<String, dynamic> toJson() =>
+      (_i1.serializers.serializeWith(GFindUsersByNameData.serializer, this)
+          as Map<String, dynamic>);
+  static GFindUsersByNameData? fromJson(Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(GFindUsersByNameData.serializer, json);
+}
+
+abstract class GFindUsersByNameData_users
+    implements
+        Built<GFindUsersByNameData_users, GFindUsersByNameData_usersBuilder> {
+  GFindUsersByNameData_users._();
+
+  factory GFindUsersByNameData_users(
+          [Function(GFindUsersByNameData_usersBuilder b) updates]) =
+      _$GFindUsersByNameData_users;
+
+  static void _initializeBuilder(GFindUsersByNameData_usersBuilder b) =>
+      b..G__typename = 'users';
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  int get id;
+  String get name;
+  String get email;
+  String get adresse;
+  String get role;
+  String get function;
+  BuiltList<GFindUsersByNameData_users_works> get works;
+  static Serializer<GFindUsersByNameData_users> get serializer =>
+      _$gFindUsersByNameDataUsersSerializer;
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+      GFindUsersByNameData_users.serializer, this) as Map<String, dynamic>);
+  static GFindUsersByNameData_users? fromJson(Map<String, dynamic> json) =>
+      _i1.serializers
+          .deserializeWith(GFindUsersByNameData_users.serializer, json);
+}
+
+abstract class GFindUsersByNameData_users_works
+    implements
+        Built<GFindUsersByNameData_users_works,
+            GFindUsersByNameData_users_worksBuilder> {
+  GFindUsersByNameData_users_works._();
+
+  factory GFindUsersByNameData_users_works(
+          [Function(GFindUsersByNameData_users_worksBuilder b) updates]) =
+      _$GFindUsersByNameData_users_works;
+
+  static void _initializeBuilder(GFindUsersByNameData_users_worksBuilder b) =>
+      b..G__typename = 'works';
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  int get id;
+  String get name;
+  String get description;
+  String get image_url;
+  GFindUsersByNameData_users_works_category get category;
+  static Serializer<GFindUsersByNameData_users_works> get serializer =>
+      _$gFindUsersByNameDataUsersWorksSerializer;
+  Map<String, dynamic> toJson() => (_i1.serializers
+          .serializeWith(GFindUsersByNameData_users_works.serializer, this)
+      as Map<String, dynamic>);
+  static GFindUsersByNameData_users_works? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers
+          .deserializeWith(GFindUsersByNameData_users_works.serializer, json);
+}
+
+abstract class GFindUsersByNameData_users_works_category
+    implements
+        Built<GFindUsersByNameData_users_works_category,
+            GFindUsersByNameData_users_works_categoryBuilder> {
+  GFindUsersByNameData_users_works_category._();
+
+  factory GFindUsersByNameData_users_works_category(
+      [Function(GFindUsersByNameData_users_works_categoryBuilder b)
+          updates]) = _$GFindUsersByNameData_users_works_category;
+
+  static void _initializeBuilder(
+          GFindUsersByNameData_users_works_categoryBuilder b) =>
+      b..G__typename = 'categories';
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  int get id;
+  String get name;
+  String get description;
+  static Serializer<GFindUsersByNameData_users_works_category> get serializer =>
+      _$gFindUsersByNameDataUsersWorksCategorySerializer;
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+          GFindUsersByNameData_users_works_category.serializer, this)
+      as Map<String, dynamic>);
+  static GFindUsersByNameData_users_works_category? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+          GFindUsersByNameData_users_works_category.serializer, json);
+}
+
+abstract class GUpdateUserData
+    implements Built<GUpdateUserData, GUpdateUserDataBuilder> {
+  GUpdateUserData._();
+
+  factory GUpdateUserData([Function(GUpdateUserDataBuilder b) updates]) =
+      _$GUpdateUserData;
+
+  static void _initializeBuilder(GUpdateUserDataBuilder b) =>
+      b..G__typename = 'mutation_root';
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  GUpdateUserData_update_users_by_pk? get update_users_by_pk;
+  static Serializer<GUpdateUserData> get serializer =>
+      _$gUpdateUserDataSerializer;
+  Map<String, dynamic> toJson() =>
+      (_i1.serializers.serializeWith(GUpdateUserData.serializer, this)
+          as Map<String, dynamic>);
+  static GUpdateUserData? fromJson(Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(GUpdateUserData.serializer, json);
+}
+
+abstract class GUpdateUserData_update_users_by_pk
+    implements
+        Built<GUpdateUserData_update_users_by_pk,
+            GUpdateUserData_update_users_by_pkBuilder> {
+  GUpdateUserData_update_users_by_pk._();
+
+  factory GUpdateUserData_update_users_by_pk(
+          [Function(GUpdateUserData_update_users_by_pkBuilder b) updates]) =
+      _$GUpdateUserData_update_users_by_pk;
+
+  static void _initializeBuilder(GUpdateUserData_update_users_by_pkBuilder b) =>
+      b..G__typename = 'users';
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  int get id;
+  String get name;
+  String get email;
+  String get adresse;
+  String get function;
+  String get role;
+  BuiltList<GUpdateUserData_update_users_by_pk_works> get works;
+  static Serializer<GUpdateUserData_update_users_by_pk> get serializer =>
+      _$gUpdateUserDataUpdateUsersByPkSerializer;
+  Map<String, dynamic> toJson() => (_i1.serializers
+          .serializeWith(GUpdateUserData_update_users_by_pk.serializer, this)
+      as Map<String, dynamic>);
+  static GUpdateUserData_update_users_by_pk? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers
+          .deserializeWith(GUpdateUserData_update_users_by_pk.serializer, json);
+}
+
+abstract class GUpdateUserData_update_users_by_pk_works
+    implements
+        Built<GUpdateUserData_update_users_by_pk_works,
+            GUpdateUserData_update_users_by_pk_worksBuilder> {
+  GUpdateUserData_update_users_by_pk_works._();
+
+  factory GUpdateUserData_update_users_by_pk_works(
+      [Function(GUpdateUserData_update_users_by_pk_worksBuilder b)
+          updates]) = _$GUpdateUserData_update_users_by_pk_works;
+
+  static void _initializeBuilder(
+          GUpdateUserData_update_users_by_pk_worksBuilder b) =>
+      b..G__typename = 'works';
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  int get id;
+  String get name;
+  String get description;
+  String get image_url;
+  GUpdateUserData_update_users_by_pk_works_category get category;
+  static Serializer<GUpdateUserData_update_users_by_pk_works> get serializer =>
+      _$gUpdateUserDataUpdateUsersByPkWorksSerializer;
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+          GUpdateUserData_update_users_by_pk_works.serializer, this)
+      as Map<String, dynamic>);
+  static GUpdateUserData_update_users_by_pk_works? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+          GUpdateUserData_update_users_by_pk_works.serializer, json);
+}
+
+abstract class GUpdateUserData_update_users_by_pk_works_category
+    implements
+        Built<GUpdateUserData_update_users_by_pk_works_category,
+            GUpdateUserData_update_users_by_pk_works_categoryBuilder> {
+  GUpdateUserData_update_users_by_pk_works_category._();
+
+  factory GUpdateUserData_update_users_by_pk_works_category(
+      [Function(GUpdateUserData_update_users_by_pk_works_categoryBuilder b)
+          updates]) = _$GUpdateUserData_update_users_by_pk_works_category;
+
+  static void _initializeBuilder(
+          GUpdateUserData_update_users_by_pk_works_categoryBuilder b) =>
+      b..G__typename = 'categories';
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  int get id;
+  String get name;
+  String get description;
+  static Serializer<GUpdateUserData_update_users_by_pk_works_category>
+      get serializer => _$gUpdateUserDataUpdateUsersByPkWorksCategorySerializer;
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+          GUpdateUserData_update_users_by_pk_works_category.serializer, this)
+      as Map<String, dynamic>);
+  static GUpdateUserData_update_users_by_pk_works_category? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+          GUpdateUserData_update_users_by_pk_works_category.serializer, json);
+}

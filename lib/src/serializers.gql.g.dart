@@ -17,8 +17,26 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GFetchUserListData_users_works_category.serializer)
       ..add(GFetchUserListReq.serializer)
       ..add(GFetchUserListVars.serializer)
+      ..add(GFindUsersByNameData.serializer)
+      ..add(GFindUsersByNameData_users.serializer)
+      ..add(GFindUsersByNameData_users_works.serializer)
+      ..add(GFindUsersByNameData_users_works_category.serializer)
+      ..add(GFindUsersByNameReq.serializer)
+      ..add(GFindUsersByNameVars.serializer)
+      ..add(GFindUsersByPkData.serializer)
+      ..add(GFindUsersByPkData_users_by_pk.serializer)
+      ..add(GFindUsersByPkData_users_by_pk_works.serializer)
+      ..add(GFindUsersByPkData_users_by_pk_works_category.serializer)
+      ..add(GFindUsersByPkReq.serializer)
+      ..add(GFindUsersByPkVars.serializer)
       ..add(GInt_comparison_exp.serializer)
       ..add(GString_comparison_exp.serializer)
+      ..add(GUpdateUserData.serializer)
+      ..add(GUpdateUserData_update_users_by_pk.serializer)
+      ..add(GUpdateUserData_update_users_by_pk_works.serializer)
+      ..add(GUpdateUserData_update_users_by_pk_works_category.serializer)
+      ..add(GUpdateUserReq.serializer)
+      ..add(GUpdateUserVars.serializer)
       ..add(Gcategories_bool_exp.serializer)
       ..add(Gcategories_constraint.serializer)
       ..add(Gcategories_inc_input.serializer)
@@ -72,6 +90,22 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList,
               const [const FullType(GFetchUserListData_users_works)]),
           () => new ListBuilder<GFetchUserListData_users_works>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(GFindUsersByNameData_users)]),
+          () => new ListBuilder<GFindUsersByNameData_users>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GFindUsersByNameData_users_works)]),
+          () => new ListBuilder<GFindUsersByNameData_users_works>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GFindUsersByPkData_users_by_pk_works)]),
+          () => new ListBuilder<GFindUsersByPkData_users_by_pk_works>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GUpdateUserData_update_users_by_pk_works)]),
+          () => new ListBuilder<GUpdateUserData_update_users_by_pk_works>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(Gcategories_bool_exp)]),

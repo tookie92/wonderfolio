@@ -10,11 +10,33 @@ import 'package:wonderfolio/src/operations.data.gql.dart'
         GFetchUserListData,
         GFetchUserListData_users,
         GFetchUserListData_users_works,
-        GFetchUserListData_users_works_category;
+        GFetchUserListData_users_works_category,
+        GFindUsersByNameData,
+        GFindUsersByNameData_users,
+        GFindUsersByNameData_users_works,
+        GFindUsersByNameData_users_works_category,
+        GFindUsersByPkData,
+        GFindUsersByPkData_users_by_pk,
+        GFindUsersByPkData_users_by_pk_works,
+        GFindUsersByPkData_users_by_pk_works_category,
+        GUpdateUserData,
+        GUpdateUserData_update_users_by_pk,
+        GUpdateUserData_update_users_by_pk_works,
+        GUpdateUserData_update_users_by_pk_works_category;
 import 'package:wonderfolio/src/operations.req.gql.dart'
-    show GAddUserReq, GFetchUserListReq;
+    show
+        GAddUserReq,
+        GFetchUserListReq,
+        GFindUsersByNameReq,
+        GFindUsersByPkReq,
+        GUpdateUserReq;
 import 'package:wonderfolio/src/operations.var.gql.dart'
-    show GAddUserVars, GFetchUserListVars;
+    show
+        GAddUserVars,
+        GFetchUserListVars,
+        GFindUsersByNameVars,
+        GFindUsersByPkVars,
+        GUpdateUserVars;
 import 'package:wonderfolio/src/schema.schema.gql.dart'
     show
         GInt_comparison_exp,
@@ -81,8 +103,26 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GFetchUserListData_users_works_category,
   GFetchUserListReq,
   GFetchUserListVars,
+  GFindUsersByNameData,
+  GFindUsersByNameData_users,
+  GFindUsersByNameData_users_works,
+  GFindUsersByNameData_users_works_category,
+  GFindUsersByNameReq,
+  GFindUsersByNameVars,
+  GFindUsersByPkData,
+  GFindUsersByPkData_users_by_pk,
+  GFindUsersByPkData_users_by_pk_works,
+  GFindUsersByPkData_users_by_pk_works_category,
+  GFindUsersByPkReq,
+  GFindUsersByPkVars,
   GInt_comparison_exp,
   GString_comparison_exp,
+  GUpdateUserData,
+  GUpdateUserData_update_users_by_pk,
+  GUpdateUserData_update_users_by_pk_works,
+  GUpdateUserData_update_users_by_pk_works_category,
+  GUpdateUserReq,
+  GUpdateUserVars,
   Gcategories_bool_exp,
   Gcategories_constraint,
   Gcategories_inc_input,

@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterfire_ui/auth.dart';
 import 'package:wonderfolio/authentification/form_normal.dart';
+import 'package:wonderfolio/authentification/form_update.dart';
 import 'package:wonderfolio/blocs/blocs.dart';
 
 class Accueil extends StatelessWidget {
@@ -45,21 +46,8 @@ class Accueil extends StatelessWidget {
                   children: [
                     TextButton(
                       onPressed: () {
-                        showDialog(
-                            context: context,
-                            barrierDismissible: true,
-                            builder: (context) {
-                              return ProfileScreen(
-                                children: [
-                                  FirebaseAuth.instance.currentUser!
-                                              .displayName !=
-                                          null
-                                      ? FormNormal()
-                                      : const SizedBox.expand(),
-                                ],
-                                providerConfigs: [],
-                              );
-                            });
+                        Navigator.of(context)
+                            .push(BlocRouter().profileScreen());
                       },
                       child: const Text('Profile'),
                     ),

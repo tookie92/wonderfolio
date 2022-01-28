@@ -31,6 +31,28 @@ query FetchUserList{
   }
 }
 
+query FindUsersByPk($id: Int!){
+  users_by_pk(id: $id){
+    id
+    name
+    email
+    adresse
+    role
+    function
+    works{
+      id
+      name
+      description
+      image_url
+      category{
+        id
+        name
+        description
+      }
+    }
+  }
+}
+
 
 query FindUsersByName($where: users_bool_exp){
   users(where: $where){
@@ -40,5 +62,39 @@ query FindUsersByName($where: users_bool_exp){
     adresse
     role
     function
+    works{
+      id
+      name
+      description
+      image_url
+      category{
+        id
+        name
+        description
+      }
+    }
+  }
+}
+
+
+mutation UpdateUser($pk_columns: users_pk_columns_input!, $set: users_set_input){
+  update_users_by_pk(_set: $set, pk_columns: $pk_columns){
+    id
+    name
+    email
+    adresse
+    function
+    role
+    works{
+      id
+      name
+      description
+      image_url
+      category{
+        id
+        name
+        description
+      }
+    }
   }
 }

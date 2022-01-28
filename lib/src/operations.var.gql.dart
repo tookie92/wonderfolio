@@ -38,3 +38,56 @@ abstract class GFetchUserListVars
   static GFetchUserListVars? fromJson(Map<String, dynamic> json) =>
       _i2.serializers.deserializeWith(GFetchUserListVars.serializer, json);
 }
+
+abstract class GFindUsersByPkVars
+    implements Built<GFindUsersByPkVars, GFindUsersByPkVarsBuilder> {
+  GFindUsersByPkVars._();
+
+  factory GFindUsersByPkVars([Function(GFindUsersByPkVarsBuilder b) updates]) =
+      _$GFindUsersByPkVars;
+
+  int get id;
+  static Serializer<GFindUsersByPkVars> get serializer =>
+      _$gFindUsersByPkVarsSerializer;
+  Map<String, dynamic> toJson() =>
+      (_i2.serializers.serializeWith(GFindUsersByPkVars.serializer, this)
+          as Map<String, dynamic>);
+  static GFindUsersByPkVars? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(GFindUsersByPkVars.serializer, json);
+}
+
+abstract class GFindUsersByNameVars
+    implements Built<GFindUsersByNameVars, GFindUsersByNameVarsBuilder> {
+  GFindUsersByNameVars._();
+
+  factory GFindUsersByNameVars(
+          [Function(GFindUsersByNameVarsBuilder b) updates]) =
+      _$GFindUsersByNameVars;
+
+  _i1.Gusers_bool_exp? get where;
+  static Serializer<GFindUsersByNameVars> get serializer =>
+      _$gFindUsersByNameVarsSerializer;
+  Map<String, dynamic> toJson() =>
+      (_i2.serializers.serializeWith(GFindUsersByNameVars.serializer, this)
+          as Map<String, dynamic>);
+  static GFindUsersByNameVars? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(GFindUsersByNameVars.serializer, json);
+}
+
+abstract class GUpdateUserVars
+    implements Built<GUpdateUserVars, GUpdateUserVarsBuilder> {
+  GUpdateUserVars._();
+
+  factory GUpdateUserVars([Function(GUpdateUserVarsBuilder b) updates]) =
+      _$GUpdateUserVars;
+
+  _i1.Gusers_pk_columns_input get pk_columns;
+  _i1.Gusers_set_input? get set;
+  static Serializer<GUpdateUserVars> get serializer =>
+      _$gUpdateUserVarsSerializer;
+  Map<String, dynamic> toJson() =>
+      (_i2.serializers.serializeWith(GUpdateUserVars.serializer, this)
+          as Map<String, dynamic>);
+  static GUpdateUserVars? fromJson(Map<String, dynamic> json) =>
+      _i2.serializers.deserializeWith(GUpdateUserVars.serializer, json);
+}

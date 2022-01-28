@@ -4,6 +4,8 @@ import 'package:ferry/ferry.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get_it/get_it.dart';
 import 'package:wonderfolio/blocs/blocs.dart';
+import 'package:wonderfolio/models/user_model.dart';
+import 'package:wonderfolio/src/operations.data.gql.dart';
 import 'package:wonderfolio/src/operations.req.gql.dart';
 
 class BlocHome extends Bloc {
@@ -48,6 +50,31 @@ class HomeState {
 
     client.request(req).listen((response) {
       print(response.data!.insert_users_one);
+    });
+  }
+
+  updateUser(UserModel user, int myId) {
+    final client = GetIt.instance<Client>();
+    final req = GUpdateUserReq(
+      (b) {
+        return b
+          ..vars.pk_columns.id = myId
+          ..vars.set.name = userActu
+          ..vars.set.email = userEmail
+          ..vars.set.adresse = user.adresse
+          ..vars.set.role = user.role
+          ..vars.set.function = user.function;
+      },
+    );
+
+    client.request(req).listen((response) {
+      print(response.data!.update_users_by_pk);
+      final allUser = GFetchUserListReq();
+      final cache = client.cache.readQuery(allUser);
+      final updateList = GFetchUserListData((b) {
+        return b..users.addAll(cache!.users);
+      });
+      client.cache.writeQuery(allUser, updateList);
     });
   }
 }
