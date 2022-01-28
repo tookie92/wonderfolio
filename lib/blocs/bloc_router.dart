@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:wonderfolio/authentification/authgate.dart';
-import 'package:wonderfolio/authentification/registergate.dart';
 import 'package:wonderfolio/blocs/bloc_provider.dart';
 import 'package:wonderfolio/blocs/blocs.dart';
 import 'package:wonderfolio/screens/pages/accueil.dart';
