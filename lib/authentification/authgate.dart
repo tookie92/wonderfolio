@@ -48,30 +48,8 @@ class Authgate extends StatelessWidget {
               builder: (context, s) {
                 if (!s.hasData) {
                   return SignInScreen(
-                    showAuthActionSwitch: false,
-                    subtitleBuilder: (context, action) {
-                      return Padding(
-                        padding: EdgeInsets.only(bottom: 8),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: size.width * 0.5,
-                              child: const Text("You don't have account."),
-                            ),
-                            SizedBox(
-                              width: size.width * 0.3,
-                              child: TextButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                      context, BlocRouter().registerPage());
-                                },
-                                child: const Text('Register'),
-                              ),
-                            ),
-                          ],
-                        ),
-                      );
-                    },
+                    //showAuthActionSwitch: false,
+
                     providerConfigs: const [
                       EmailProviderConfiguration(),
                     ],
