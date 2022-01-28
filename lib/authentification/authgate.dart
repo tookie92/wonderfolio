@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterfire_ui/auth.dart';
-import 'package:wonderfolio/authentification/registergate.dart';
+import 'package:wonderfolio/authentification/form_normal.dart';
 import 'package:wonderfolio/blocs/blocs.dart';
 
 class Authgate extends StatelessWidget {
@@ -35,11 +35,11 @@ class Authgate extends StatelessWidget {
           final truc = s.data;
 
           if (truc == null) {
-            return Center(
+            return const Center(
               child: Text('ok dou fi'),
             );
           } else if (!s.hasData) {
-            return Center(
+            return const Center(
               child: Text('nope'),
             );
           } else {
@@ -47,10 +47,10 @@ class Authgate extends StatelessWidget {
               stream: FirebaseAuth.instance.authStateChanges(),
               builder: (context, s) {
                 if (!s.hasData) {
-                  return SignInScreen(
+                  return const SignInScreen(
                     //showAuthActionSwitch: false,
 
-                    providerConfigs: const [
+                    providerConfigs: [
                       EmailProviderConfiguration(),
                     ],
                   );
