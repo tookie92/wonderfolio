@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>5351146159-ca24sk39spro4gl4ngohakbmbfj3rh1p.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.5351146159-ca24sk39spro4gl4ngohakbmbfj3rh1p</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC-i45LT_84xyt98q_pdZLwZ9sddeCtZF4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>5351146159</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.wonderfolio</string>
+	<key>PROJECT_ID</key>
+	<string>wonderfolio-8dc37</string>
+	<key>STORAGE_BUCKET</key>
+	<string>wonderfolio-8dc37.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:5351146159:ios:d9ee3e7ac51fc36a83ca5a</string>
+</dict>
+</plist>

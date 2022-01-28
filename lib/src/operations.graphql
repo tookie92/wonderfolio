@@ -1,0 +1,32 @@
+mutation AddUser($object: users_insert_input!){
+  insert_users_one(object: $object){
+    id
+    name
+    email
+    adresse
+    role
+    function
+  }
+}
+
+query FetchUserList{
+  users{
+    id
+    name
+    email
+    adresse
+    role
+    function
+    works{
+      id
+      name
+      description
+      image_url
+      category{
+        id
+        name
+        description
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "5351146159",
+    "project_id": "wonderfolio-8dc37",
+    "storage_bucket": "wonderfolio-8dc37.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5351146159:android:cef6185050c06ebe83ca5a",
+        "android_client_info": {
+          "package_name": "com.example.wonderfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5351146159-rd2597mjnuo8bc4e82vkdn6dbncs1gdv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-4YQ-y7TcLevlP5y3nxQeBsn8Tp1oXTs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "5351146159-rd2597mjnuo8bc4e82vkdn6dbncs1gdv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "5351146159-ca24sk39spro4gl4ngohakbmbfj3rh1p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.wonderfolio"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
