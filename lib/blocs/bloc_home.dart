@@ -77,4 +77,8 @@ class HomeState {
       client.cache.writeQuery(allUser, updateList);
     });
   }
+
+  signOut() {
+    FirebaseAuth.instance.signOut();
+  }
 }

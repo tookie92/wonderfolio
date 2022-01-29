@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterfire_ui/auth.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:wonderfolio/authentification/form_normal.dart';
 import 'package:wonderfolio/blocs/blocs.dart';
 
@@ -14,7 +15,8 @@ class Authgate extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        //textTheme: TextTheme(headline1: GoogleFonts.montserrat()),
+        textTheme: TextTheme(
+            headline1: GoogleFonts.cookie(fontSize: 20.0, color: Colors.black)),
         inputDecorationTheme: InputDecorationTheme(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),

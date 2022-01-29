@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterfire_ui/auth.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:wonderfolio/authentification/form_normal.dart';
 import 'package:wonderfolio/authentification/form_update.dart';
 import 'package:wonderfolio/blocs/blocs.dart';
@@ -39,27 +41,44 @@ class Accueil extends StatelessWidget {
               ),
             );
           } else {
-            return SizedBox(
-              child: Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    TextButton(
+            return CustomScrollView(
+              slivers: [
+                SliverAppBar(
+                  expandedHeight: 100.0,
+                  backgroundColor: Colors.grey[100],
+                  elevation: 130.0,
+                  snap: true,
+                  floating: true,
+                  flexibleSpace: FlexibleSpaceBar(
+                    centerTitle: true,
+                    title: Text(
+                      'wonderfolio',
+                      style: Theme.of(context).textTheme.headline1,
+                    ),
+                  ),
+                  actions: [
+                    IconButton(
                       onPressed: () {
                         Navigator.of(context)
                             .push(BlocRouter().profileScreen());
                       },
-                      child: const Text('Profile'),
+                      icon: FaIcon(
+                        FontAwesomeIcons.userCircle,
+                        color: Colors.black,
+                      ),
                     ),
-                    TextButton(
+                    IconButton(
                       onPressed: () {
-                        FirebaseAuth.instance.signOut();
+                        truc.signOut();
                       },
-                      child: const Text('logout'),
-                    ),
+                      icon: const FaIcon(
+                        FontAwesomeIcons.signOutAlt,
+                        color: Colors.black,
+                      ),
+                    )
                   ],
                 ),
-              ),
+              ],
             );
           }
         },
